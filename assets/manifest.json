@@ -1,0 +1,473 @@
+{
+  "version": 1,
+  "pixelsPerMetre": 48,
+  "frame": {
+    "width": 128,
+    "height": 128,
+    "columns": 8,
+    "rows": 7,
+    "order": "top-to-bottom rows, left-to-right columns",
+    "pivotPixelsFromTopLeft": [
+      64,
+      114
+    ],
+    "unityPivotNormalized": [
+      0.5,
+      0.109375
+    ]
+  },
+  "characters": [
+    {
+      "id": 0,
+      "name": "Клёп",
+      "color": "#39B7BC",
+      "hat": "hardhat",
+      "backpack": "tool",
+      "path": "sprites/characters/player-1.png"
+    },
+    {
+      "id": 1,
+      "name": "Поплавок",
+      "color": "#F57752",
+      "hat": "fisher",
+      "backpack": "roll",
+      "path": "sprites/characters/player-2.png"
+    },
+    {
+      "id": 2,
+      "name": "Пластырь",
+      "color": "#F6C453",
+      "hat": "medic",
+      "backpack": "medical",
+      "path": "sprites/characters/player-3.png"
+    },
+    {
+      "id": 3,
+      "name": "Шурш",
+      "color": "#AA8CDB",
+      "hat": "beanie",
+      "backpack": "pouch",
+      "path": "sprites/characters/player-4.png"
+    }
+  ],
+  "animations": [
+    {
+      "name": "idle",
+      "label": "Ожидание",
+      "row": 0,
+      "frames": 8,
+      "duration": 1.2,
+      "loop": true,
+      "fps": 6.666666666666667
+    },
+    {
+      "name": "walk",
+      "label": "Ходьба",
+      "row": 1,
+      "frames": 8,
+      "duration": 0.64,
+      "loop": true,
+      "fps": 12.5
+    },
+    {
+      "name": "aim",
+      "label": "Прицеливание",
+      "row": 2,
+      "frames": 8,
+      "duration": 0.8,
+      "loop": true,
+      "fps": 10
+    },
+    {
+      "name": "hurt",
+      "label": "Урон",
+      "row": 3,
+      "frames": 8,
+      "duration": 0.24,
+      "loop": false,
+      "fps": 33.333333333333336
+    },
+    {
+      "name": "blast",
+      "label": "От взрыва",
+      "row": 4,
+      "frames": 8,
+      "duration": 0.64,
+      "loop": true,
+      "fps": 12.5
+    },
+    {
+      "name": "joy",
+      "label": "Радость",
+      "row": 5,
+      "frames": 8,
+      "duration": 0.8,
+      "loop": false,
+      "fps": 10
+    },
+    {
+      "name": "roulette_loss",
+      "label": "Проигрыш",
+      "row": 6,
+      "frames": 8,
+      "duration": 1.1,
+      "loop": false,
+      "fps": 7.2727272727272725
+    }
+  ],
+  "layers": [
+    "backpack",
+    "legs",
+    "boots",
+    "capsule",
+    "eyes",
+    "mouth",
+    "hat",
+    "hands",
+    "weapon"
+  ],
+  "rig": {
+    "hip": [
+      64,
+      70
+    ],
+    "foot": [
+      64,
+      114
+    ],
+    "hat": [
+      64,
+      36
+    ],
+    "backpack": [
+      40,
+      75
+    ],
+    "handFront": [
+      95,
+      74
+    ],
+    "weapon": [
+      77,
+      75
+    ],
+    "eyeLeft": [
+      59,
+      55
+    ],
+    "eyeRight": [
+      76,
+      55
+    ],
+    "collider": "48 × 78 px; fixed, not scaled with visual squash"
+  },
+  "props": [
+    {
+      "name": "fish",
+      "rectTopLeft": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "crate",
+      "rectTopLeft": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "bag",
+      "rectTopLeft": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "gas",
+      "rectTopLeft": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "medkit",
+      "rectTopLeft": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "spring",
+      "rectTopLeft": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "grenade",
+      "rectTopLeft": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "coin",
+      "rectTopLeft": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "launcher",
+      "rectTopLeft": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "grip": [
+        48,
+        64
+      ]
+    },
+    {
+      "name": "harpoon",
+      "rectTopLeft": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "grip": [
+        48,
+        64
+      ]
+    },
+    {
+      "name": "shotgun",
+      "rectTopLeft": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "grip": [
+        48,
+        64
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "name": "building-residential",
+      "path": "sprites/modules/building-residential.png",
+      "width": 320,
+      "height": 430,
+      "pivot": [
+        0.5,
+        0.046511627906976744
+      ]
+    },
+    {
+      "name": "building-factory",
+      "path": "sprites/modules/building-factory.png",
+      "width": 320,
+      "height": 430,
+      "pivot": [
+        0.5,
+        0.046511627906976744
+      ]
+    },
+    {
+      "name": "building-port",
+      "path": "sprites/modules/building-port.png",
+      "width": 320,
+      "height": 430,
+      "pivot": [
+        0.5,
+        0.046511627906976744
+      ]
+    },
+    {
+      "name": "platform-solid",
+      "path": "sprites/modules/platform-solid.png",
+      "width": 128,
+      "height": 48,
+      "pivot": [
+        0.5,
+        0.75
+      ]
+    },
+    {
+      "name": "platform-breakable",
+      "path": "sprites/modules/platform-breakable.png",
+      "width": 128,
+      "height": 48,
+      "pivot": [
+        0.5,
+        0.75
+      ]
+    },
+    {
+      "name": "shop",
+      "path": "sprites/modules/shop.png",
+      "width": 128,
+      "height": 160,
+      "pivot": [
+        0.5,
+        0.09375
+      ]
+    },
+    {
+      "name": "roulette",
+      "path": "sprites/modules/roulette.png",
+      "width": 128,
+      "height": 160,
+      "pivot": [
+        0.5,
+        0.09375
+      ]
+    },
+    {
+      "name": "flag-player-1",
+      "path": "sprites/modules/flag-player-1.png",
+      "width": 96,
+      "height": 96,
+      "pivot": [
+        0.22916666666666666,
+        0.07291666666666667
+      ]
+    },
+    {
+      "name": "flag-player-2",
+      "path": "sprites/modules/flag-player-2.png",
+      "width": 96,
+      "height": 96,
+      "pivot": [
+        0.22916666666666666,
+        0.07291666666666667
+      ]
+    },
+    {
+      "name": "flag-player-3",
+      "path": "sprites/modules/flag-player-3.png",
+      "width": 96,
+      "height": 96,
+      "pivot": [
+        0.22916666666666666,
+        0.07291666666666667
+      ]
+    },
+    {
+      "name": "flag-player-4",
+      "path": "sprites/modules/flag-player-4.png",
+      "width": 96,
+      "height": 96,
+      "pivot": [
+        0.22916666666666666,
+        0.07291666666666667
+      ]
+    }
+  ],
+  "palette": {
+    "ink": "#202B38",
+    "paper": "#F4E9D5",
+    "white": "#FFF7E6",
+    "steel": "#566675",
+    "wall": "#78828A",
+    "concrete": "#B5ADA1",
+    "olive": "#727D54",
+    "rust": "#B35B45",
+    "teal": "#39B7BC",
+    "coral": "#F57752",
+    "gold": "#F6C453",
+    "violet": "#AA8CDB",
+    "water": "#355F69",
+    "sky": "#DFCCB5",
+    "distant": "#A89B9D",
+    "black": "#334352"
+  },
+  "districts": [
+    {
+      "id": "residential",
+      "name": "Жилой район",
+      "subtitle": "Дворы и крыши",
+      "sky": "#DFCCB5",
+      "back": "#A89B9D",
+      "wall": "#B5ADA1",
+      "accent": "#39B7BC",
+      "props": "balconies"
+    },
+    {
+      "id": "factory",
+      "name": "Завод",
+      "subtitle": "Цех и конвейер",
+      "sky": "#C9C2B5",
+      "back": "#909596",
+      "wall": "#78828A",
+      "accent": "#F6C453",
+      "props": "pipes"
+    },
+    {
+      "id": "port",
+      "name": "Порт",
+      "subtitle": "Причалы и контейнеры",
+      "sky": "#DFCCB5",
+      "back": "#A89B9D",
+      "wall": "#566675",
+      "accent": "#F57752",
+      "props": "crane"
+    }
+  ]
+}

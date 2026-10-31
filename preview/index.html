@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Отряд последнего шанса · художественное направление</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="title"><div class="eyebrow">ХУДОЖЕСТВЕННАЯ СЦЕНА · ВЕРСИЯ 0.1</div><h1>Отряд последнего шанса<span>Один город. Четыре бедовых героя.</span></h1></div>
+      <div class="head-actions"><button id="map-button">Карта города <span>↗</span></button><button id="board-button">Лист стиля</button></div>
+    </header>
+    <section class="scene-wrap" aria-label="Проверочная арена">
+      <div class="scene-bar"><div><span class="live-dot"></span><strong id="district-label">Порт</strong><span class="muted"> / </span><span id="district-subtitle">Причалы и контейнеры</span></div><div class="scene-actions"><button id="stress-button" aria-pressed="false">Нагрузка</button><button id="effects-button" aria-pressed="false">Меньше эффектов</button><button id="shake-button" aria-pressed="false">Тряска: выкл.</button><button id="reset-button">Заново</button></div></div>
+      <canvas id="arena" width="1600" height="800" tabindex="0" aria-label="Арена с четырьмя игроками, магазинами, рулеткой и добычей. Управление описано под сценой."></canvas>
+      <div class="scene-caption"><div><b id="turn-label">Ход Клёпа</b><span id="timer">40 с</span><span id="round-label">Раунд 1</span></div><span id="status">Доберитесь до лавки, автомата или свободного убежища.</span><span id="perf">— мс / кадр</span></div>
+    </section>
+    <section class="roster" id="roster" aria-label="Показатели отряда"></section>
+    <div class="control-strip"><span><kbd>A</kbd><kbd>D</kbd> ходить</span><span><kbd>Space</kbd> прыгать</span><span><kbd>Shift</kbd> рывок</span><span><b>Мышь</b> прицел · ЛКМ выстрел</span><span><kbd>E</kbd> взаимодействовать</span><span><kbd>Enter</kbd> следующий ход</span></div>
+    <section class="animation-section"><div class="section-caption"><h2>Один характер. Семь реакций.</h2><div>Общий риг · сменные головные уборы и рюкзаки</div></div><div id="animation-grid" class="animation-grid"></div></section>
+    <footer><span>Сцена для проверки художественного направления и нагрузки. Локальное управление по очереди.</span><button id="report-button">Замерить 30 секунд</button><button id="download-button" hidden>Скачать отчёт</button></footer>
+  </main>
+  <dialog id="map-dialog"><div class="dialog-title"><div><small>ЕДИНАЯ КАРТА ГОРОДА</small><h2>Куда отправится отряд?</h2></div><button data-close aria-label="Закрыть">×</button></div><canvas id="world-map" width="900" height="300" aria-label="Жилой район связан дорогами с заводом и портом"></canvas><div id="district-options" class="district-options"></div><p class="dialog-note">Лавки, автоматы и личные убежища находятся на самих аренах.</p></dialog>
+  <dialog id="roulette-dialog"><div class="dialog-title"><div><small>УЛИЧНЫЙ АВТОМАТ</small><h2>Ноги или улучшение?</h2></div><button data-close aria-label="Закрыть">×</button></div><p>Ставка меняет <b>максимум мобильности будущих ходов</b>. Уже потраченное движение сохраняется. Минимум — 40; одна попытка за раунд.</p><div class="odds"><span><b>50%</b> улучшение</span><span><b>10%</b> джекпот</span><span><b>25%</b> проигрыш</span><span><b>15%</b> кривая сделка</span></div><p>Успех: ходьба дешевле на 30%. Джекпот: прыжок дешевле на 40% и максимум растёт на ставку. Кривая сделка: взрыв сильнее, максимум уменьшается.</p><div class="bet-buttons"><button data-stake="10">Поставить 10</button><button data-stake="20">Поставить 20</button><button data-stake="30">Поставить 30</button></div><hr><h3>Рулетка трофеями</h3><p>8 равных секторов: 3 красных, 3 чёрных, золотой, череп. Трофей теряется при проигрыше.</p><div class="bet-buttons"><button data-lootbet="red">Красное ×2</button><button data-lootbet="black">Чёрное ×2</button><button data-lootbet="gold">Золотое ×6</button></div><p id="bet-hint" class="dialog-note"></p></dialog>
+  <dialog id="shop-dialog"><div class="dialog-title"><div><small>ПРИЧАЛЬНАЯ ЛАВКА</small><h2>Починим, пока целы.</h2></div><button data-close aria-label="Закрыть">×</button></div><p>Ремонтная аптечка: восстанавливает 25 HP. Цена: 20 личных монет.</p><button id="buy-button">Купить за 20</button></dialog>
+  <dialog id="board-dialog"><div class="dialog-title"><h2>Лист художественного направления</h2><button data-close aria-label="Закрыть">×</button></div><canvas id="style-board" width="1600" height="1050"></canvas></dialog>
+  <script src="../src/art.js"></script><script src="../src/simulation.js"></script><script src="preview.js"></script>
+</body>
+</html>
